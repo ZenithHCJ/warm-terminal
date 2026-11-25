@@ -1,0 +1,28 @@
+{
+  "name": "tokyo-night",
+  "label": "Tokyo Night",
+  "description": "霓虹蓝紫 · 深色",
+  "terminal": {
+    "scheme": {
+      "name": "Tokyo Night",
+      "black": "#15161e", "red": "#f7768e", "green": "#9ece6a", "yellow": "#e0af68",
+      "blue": "#7aa2f7", "purple": "#bb9af7", "cyan": "#7dcfff", "white": "#a9b1d6",
+      "brightBlack": "#414868", "brightRed": "#f7768e", "brightGreen": "#9ece6a", "brightYellow": "#e0af68",
+      "brightBlue": "#7aa2f7", "brightPurple": "#bb9af7", "brightCyan": "#7dcfff", "brightWhite": "#c0caf5",
+      "background": "#1a1b26", "foreground": "#c0caf5",
+      "selectionBackground": "#283457", "cursorColor": "#c0caf5"
+    },
+    "appTheme": {
+      "name": "Tokyo Night",
+      "tab": { "background": "#16161e", "unfocusedBackground": "#1a1b26", "showCloseButton": "hover" },
+      "tabRow": { "background": "#1a1b26", "unfocusedBackground": "#16161e" },
+      "window": { "applicationTheme": "dark" }
+    }
+  },
+  "shell": {
+    "promptDir": "\\[\\033[32m\\]",
+    "promptGit": "\\[\\033[36m\\]",
+    "batTheme": "OneHalfDark",
+    "fzf": "--height 60% --layout=reverse --border --info=inline --color=bg+:#292e42,bg:#1a1b26,spinner:#c0caf5,hl:#f7768e,fg:#c0caf5,header:#7dcfff,info:#e0af68,pointer:#bb9af7,marker:#9ece6a,fg+:#c0caf5,prompt:#7aa2f7,hl+:#f7768e,border:#3b4261"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "latte-warm",
+  "label": "Latte Warm",
+  "description": "米色暖调 · 浅色（默认）",
+  "terminal": {
+    "scheme": {
+      "name": "Latte Warm",
+      "black": "#5c5f77", "red": "#d20f39", "green": "#40a02b", "yellow": "#df8e1d",
+      "blue": "#1e66f5", "purple": "#ea76cb", "cyan": "#179299", "white": "#acb0be",
+      "brightBlack": "#6c6f85", "brightRed": "#d20f39", "brightGreen": "#40a02b", "brightYellow": "#df8e1d",
+      "brightBlue": "#1e66f5", "brightPurple": "#ea76cb", "brightCyan": "#179299", "brightWhite": "#bcc0cc",
+      "background": "#f3ead9", "foreground": "#4c4f69",
+      "selectionBackground": "#dfd3bf", "cursorColor": "#dc8a78"
+    },
+    "appTheme": {
+      "name": "Latte Warm",
+      "tab": { "background": "#e9dcc6", "unfocusedBackground": "#f3ead9", "showCloseButton": "hover" },
+      "tabRow": { "background": "#f3ead9", "unfocusedBackground": "#e9dcc6" },
+      "window": { "applicationTheme": "light" }
+    }
+  },
+  "shell": {
+    "promptDir": "\\[\\033[32m\\]",
+    "promptGit": "\\[\\033[36m\\]",
+    "batTheme": "Catppuccin Latte",
+    "fzf": "--height 60% --layout=reverse --border --info=inline --color=bg+:#e9dcc6,bg:#f3ead9,spinner:#dc8a78,hl:#d20f39,fg:#4c4f69,header:#179299,info:#df8e1d,pointer:#ea76cb,marker:#40a02b,fg+:#4c4f69,prompt:#1e66f5,hl+:#d20f39,border:#c9b89a"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "gruvbox-light",
+  "label": "Gruvbox Light",
+  "description": "复古暖黄 · 浅色",
+  "terminal": {
+    "scheme": {
+      "name": "Gruvbox Light",
+      "black": "#3c3836", "red": "#cc241d", "green": "#98971a", "yellow": "#d79921",
+      "blue": "#458588", "purple": "#b16286", "cyan": "#689d6a", "white": "#a89984",
+      "brightBlack": "#928374", "brightRed": "#9d0006", "brightGreen": "#79740e", "brightYellow": "#b57614",
+      "brightBlue": "#076678", "brightPurple": "#8f3f71", "brightCyan": "#427b58", "brightWhite": "#3c3836",
+      "background": "#fbf1c7", "foreground": "#3c3836",
+      "selectionBackground": "#ebdbb2", "cursorColor": "#282828"
+    },
+    "appTheme": {
+      "name": "Gruvbox Light",
+      "tab": { "background": "#f2e5bc", "unfocusedBackground": "#fbf1c7", "showCloseButton": "hover" },
+      "tabRow": { "background": "#fbf1c7", "unfocusedBackground": "#f2e5bc" },
+      "window": { "applicationTheme": "light" }
+    }
+  },
+  "shell": {
+    "promptDir": "\\[\\033[32m\\]",
+    "promptGit": "\\[\\033[36m\\]",
+    "batTheme": "gruvbox-light",
+    "fzf": "--height 60% --layout=reverse --border --info=inline --color=bg+:#ebdbb2,bg:#fbf1c7,spinner:#b57614,hl:#9d0006,fg:#3c3836,header:#427b58,info:#b57614,pointer:#8f3f71,marker:#79740e,fg+:#3c3836,prompt:#076678,hl+:#9d0006,border:#d5c4a1"
+  }
+}

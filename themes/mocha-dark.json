@@ -1,0 +1,28 @@
+{
+  "name": "mocha-dark",
+  "label": "Mocha Dark",
+  "description": "Catppuccin Mocha · 深色",
+  "terminal": {
+    "scheme": {
+      "name": "Mocha Dark",
+      "black": "#45475a", "red": "#f38ba8", "green": "#a6e3a1", "yellow": "#f9e2af",
+      "blue": "#89b4fa", "purple": "#cba6f7", "cyan": "#94e2d5", "white": "#bac2de",
+      "brightBlack": "#585b70", "brightRed": "#f38ba8", "brightGreen": "#a6e3a1", "brightYellow": "#f9e2af",
+      "brightBlue": "#89b4fa", "brightPurple": "#cba6f7", "brightCyan": "#94e2d5", "brightWhite": "#a6adc8",
+      "background": "#1e1e2e", "foreground": "#cdd6f4",
+      "selectionBackground": "#585b70", "cursorColor": "#f5e0dc"
+    },
+    "appTheme": {
+      "name": "Mocha Dark",
+      "tab": { "background": "#181825", "unfocusedBackground": "#1e1e2e", "showCloseButton": "hover" },
+      "tabRow": { "background": "#1e1e2e", "unfocusedBackground": "#181825" },
+      "window": { "applicationTheme": "dark" }
+    }
+  },
+  "shell": {
+    "promptDir": "\\[\\033[32m\\]",
+    "promptGit": "\\[\\033[36m\\]",
+    "batTheme": "Catppuccin Mocha",
+    "fzf": "--height 60% --layout=reverse --border --info=inline --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8,fg:#cdd6f4,header:#94e2d5,info:#f9e2af,pointer:#cba6f7,marker:#a6e3a1,fg+:#cdd6f4,prompt:#89b4fa,hl+:#f38ba8,border:#585b70"
+  }
+}

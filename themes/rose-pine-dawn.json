@@ -1,0 +1,28 @@
+{
+  "name": "rose-pine-dawn",
+  "label": "Rosé Pine Dawn",
+  "description": "玫瑰灰粉 · 浅色",
+  "terminal": {
+    "scheme": {
+      "name": "Rosé Pine Dawn",
+      "black": "#575279", "red": "#b4637a", "green": "#286983", "yellow": "#ea9d34",
+      "blue": "#286983", "purple": "#907aa9", "cyan": "#56949f", "white": "#9893a5",
+      "brightBlack": "#797593", "brightRed": "#b4637a", "brightGreen": "#286983", "brightYellow": "#ea9d34",
+      "brightBlue": "#286983", "brightPurple": "#907aa9", "brightCyan": "#56949f", "brightWhite": "#575279",
+      "background": "#faf4ed", "foreground": "#575279",
+      "selectionBackground": "#f2e9e1", "cursorColor": "#cecacd"
+    },
+    "appTheme": {
+      "name": "Rosé Pine Dawn",
+      "tab": { "background": "#fffaf3", "unfocusedBackground": "#faf4ed", "showCloseButton": "hover" },
+      "tabRow": { "background": "#faf4ed", "unfocusedBackground": "#fffaf3" },
+      "window": { "applicationTheme": "light" }
+    }
+  },
+  "shell": {
+    "promptDir": "\\[\\033[36m\\]",
+    "promptGit": "\\[\\033[35m\\]",
+    "batTheme": "OneHalfLight",
+    "fzf": "--height 60% --layout=reverse --border --info=inline --color=bg+:#f2e9e1,bg:#faf4ed,spinner:#d7827e,hl:#b4637a,fg:#575279,header:#56949f,info:#ea9d34,pointer:#907aa9,marker:#286983,fg+:#575279,prompt:#286983,hl+:#b4637a,border:#dfdad9"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "dracula",
+  "label": "Dracula",
+  "description": "紫黑高对比 · 深色",
+  "terminal": {
+    "scheme": {
+      "name": "Dracula",
+      "black": "#21222c", "red": "#ff5555", "green": "#50fa7b", "yellow": "#f1fa8c",
+      "blue": "#bd93f9", "purple": "#ff79c6", "cyan": "#8be9fd", "white": "#f8f8f2",
+      "brightBlack": "#6272a4", "brightRed": "#ff6e6e", "brightGreen": "#69ff94", "brightYellow": "#ffffa5",
+      "brightBlue": "#d6acff", "brightPurple": "#ff92df", "brightCyan": "#a4ffff", "brightWhite": "#ffffff",
+      "background": "#282a36", "foreground": "#f8f8f2",
+      "selectionBackground": "#44475a", "cursorColor": "#f8f8f2"
+    },
+    "appTheme": {
+      "name": "Dracula",
+      "tab": { "background": "#21222c", "unfocusedBackground": "#282a36", "showCloseButton": "hover" },
+      "tabRow": { "background": "#282a36", "unfocusedBackground": "#21222c" },
+      "window": { "applicationTheme": "dark" }
+    }
+  },
+  "shell": {
+    "promptDir": "\\[\\033[32m\\]",
+    "promptGit": "\\[\\033[36m\\]",
+    "batTheme": "Dracula",
+    "fzf": "--height 60% --layout=reverse --border --info=inline --color=bg+:#44475a,bg:#282a36,spinner:#f8f8f2,hl:#ff5555,fg:#f8f8f2,header:#8be9fd,info:#f1fa8c,pointer:#bd93f9,marker:#50fa7b,fg+:#f8f8f2,prompt:#bd93f9,hl+:#ff5555,border:#6272a4"
+  }
+}

@@ -1,16 +1,24 @@
 # ============================================================
 #  Warm Terminal — Git Bash 配置
-#  https://github.com/<your-name>/warm-terminal
-# ============================================================
-#  安装方式： bash scripts/install.sh
-#  自定义：   修改下面的 TOOLS_BIN 指向你自己的工具目录
+#  主题由 scripts/apply-theme.sh 写入 ~/.warm-terminal/colors.sh
 # ============================================================
 
 # ---- 工具目录（eza / bat / fzf / zoxide / lazygit 所在位置）----
 TOOLS_BIN="${TOOLS_BIN:-/d/Tools/bin}"
 [ -d "$TOOLS_BIN" ] && export PATH="$TOOLS_BIN:$PATH"
 
-# ---- zoxide：智能 cd ---- 
+# ---- 主题（由 scripts/apply-theme.sh 生成；缺失时用内置默认 Latte Warm）----
+WARM_TERMINAL_DIR="${WARM_TERMINAL_DIR:-$HOME/projects/warm-terminal}"
+[ -f "$HOME/.warm-terminal/colors.sh" ] && . "$HOME/.warm-terminal/colors.sh"
+: "${WT_THEME_NAME:=latte-warm}"
+: "${WT_DIR_COLOR:=\[\033[32m\]}"
+: "${WT_GIT_COLOR:=\[\033[36m\]}"
+: "${WT_BAT_THEME:=Catppuccin Latte}"
+: "${WT_FZF_OPTS:=--height 60% --layout=reverse --border --info=inline --color=bg+:#e9dcc6,bg:#f3ead9,spinner:#dc8a78,hl:#d20f39,fg:#4c4f69,header:#179299,info:#df8e1d,pointer:#ea76cb,marker:#40a02b,fg+:#4c4f69,prompt:#1e66f5,hl+:#d20f39,border:#c9b89a}"
+export BAT_THEME="$WT_BAT_THEME"
+export FZF_DEFAULT_OPTS="$WT_FZF_OPTS"
+
+# ---- zoxide：智能 cd ----
 if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init bash)"
 fi
@@ -32,24 +40,21 @@ alias gd='git diff'
 alias gl='git log --oneline --graph --decorate -20'
 alias lg='lazygit'
 
-# ---- fzf 外观（跟随浅色暖调主题）----
-export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border --info=inline --color=bg+:#e9dcc6,bg:#f3ead9,spinner:#dc8a78,hl:#d20f39,fg:#4c4f69,header:#179299,info:#df8e1d,pointer:#ea76cb,marker:#40a02b,fg+:#4c4f69,prompt:#1e66f5,hl+:#d20f39,border:#c9b89a'
-
 # ---- pay-respects：输错命令后敲 fuck 自动纠正 ----
 if command -v pay-respects >/dev/null 2>&1; then
     eval "$(pay-respects bash --alias fuck)"
 fi
 
-# ---- 终端提示符：简洁版（去掉 用户名@主机名，两行式）----
+# ---- 终端提示符：两行式，去掉 用户名@主机名 ----
 PS1='\[\033]0;${PWD}\007\]'                 # 窗口标题显示当前目录
 PS1="$PS1"'\n'
-PS1="$PS1"'\[\033[32m\]\w\[\033[0m\]'        # 绿色当前目录（~ 表示家目录）
+PS1="$PS1$WT_DIR_COLOR"'\w\[\033[0m\]'       # 当前目录（~ 表示家目录）
 if declare -F __git_ps1 >/dev/null 2>&1; then
-    PS1="$PS1"'\[\033[36m\]`__git_ps1 " (%s)"`\[\033[0m\]'   # git 分支
+    PS1="$PS1$WT_GIT_COLOR"'`__git_ps1 " (%s)"`\[\033[0m\]'
 fi
 PS1="$PS1"'\n$ '
 
-# ---- mt：一键在当前目录打开美化终端（Windows Terminal + Git Bash）----
+# ---- mt：一键在当前目录打开美化终端 ----
 # 用法： mt          在当前目录打开
 #        mt /e/xxx   在指定目录打开
 mt() {
@@ -59,4 +64,15 @@ mt() {
     else
         "/d/Tools/WindowsTerminal/wt.exe" -d "$dir" -p "Git Bash"
     fi
+}
+
+# ---- theme：切换主题 ----
+# 用法： theme             列出主题
+#        theme tokyo-night 切换（同时改 Windows Terminal + shell 配色）
+theme() {
+    if [ $# -eq 0 ]; then
+        ls "$WARM_TERMINAL_DIR/themes" 2>/dev/null | sed 's/\.json$//' | sed "s/^/  /;s/\(  ${WT_THEME_NAME}\)/\1  ← 当前/"
+        return 0
+    fi
+    bash "$WARM_TERMINAL_DIR/scripts/apply-theme.sh" "$@"
 }

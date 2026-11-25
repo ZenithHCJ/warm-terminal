@@ -1,0 +1,28 @@
+{
+  "name": "nord",
+  "label": "Nord",
+  "description": "极地冷灰蓝 · 深色",
+  "terminal": {
+    "scheme": {
+      "name": "Nord",
+      "black": "#3b4252", "red": "#bf616a", "green": "#a3be8c", "yellow": "#ebcb8b",
+      "blue": "#81a1c1", "purple": "#b48ead", "cyan": "#88c0d0", "white": "#e5e9f0",
+      "brightBlack": "#4c566a", "brightRed": "#bf616a", "brightGreen": "#a3be8c", "brightYellow": "#ebcb8b",
+      "brightBlue": "#81a1c1", "brightPurple": "#b48ead", "brightCyan": "#8fbcbb", "brightWhite": "#eceff4",
+      "background": "#2e3440", "foreground": "#d8dee9",
+      "selectionBackground": "#434c5e", "cursorColor": "#d8dee9"
+    },
+    "appTheme": {
+      "name": "Nord",
+      "tab": { "background": "#292e39", "unfocusedBackground": "#2e3440", "showCloseButton": "hover" },
+      "tabRow": { "background": "#2e3440", "unfocusedBackground": "#292e39" },
+      "window": { "applicationTheme": "dark" }
+    }
+  },
+  "shell": {
+    "promptDir": "\\[\\033[32m\\]",
+    "promptGit": "\\[\\033[36m\\]",
+    "batTheme": "Nord",
+    "fzf": "--height 60% --layout=reverse --border --info=inline --color=bg+:#3b4252,bg:#2e3440,spinner:#d8dee9,hl:#bf616a,fg:#d8dee9,header:#88c0d0,info:#ebcb8b,pointer:#b48ead,marker:#a3be8c,fg+:#eceff4,prompt:#81a1c1,hl+:#bf616a,border:#4c566a"
+  }
+}

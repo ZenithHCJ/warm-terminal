@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img" aria-label="Tokyo Night 预览">
+  <rect width="480" height="260" rx="10" fill="#1a1b26"/>
+  <!-- 标签栏 -->
+  <rect x="8" y="8" width="120" height="26" rx="6" fill="#16161e"/>
+  <circle cx="22" cy="21" r="4" fill="#f7768e"/>
+  <text x="34" y="26" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="11" fill="#c0caf5">Git Bash</text>
+  <rect x="0" y="40" width="480" height="4" fill="#1a1b26"/>
+  <!-- 终端内容 -->
+  <rect x="8" y="50" width="464" height="200" rx="6" fill="#1a1b26" stroke="#16161e"/>
+  <text x="16" y="86" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#9ece6a">~/projects/warm-terminal</tspan><tspan fill="#7dcfff"> (main)</tspan></text>
+  <text x="16" y="108" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#c0caf5">$ </tspan><tspan fill="#c0caf5">lt</tspan></text>
+  <text x="16" y="130" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#7aa2f7"> 󰉋 bash</tspan><tspan fill="#7aa2f7">   󰉋 scripts</tspan><tspan fill="#7aa2f7">   󰉋 themes</tspan></text>
+  <text x="16" y="152" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#c0caf5"> 󰈔 README.md</tspan><tspan fill="#e0af68">   󰈔 LICENSE</tspan></text>
+  <text x="16" y="174" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#bb9af7">  settings.json</tspan></text>
+  <text x="16" y="196" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#c0caf5">$ </tspan><tspan fill="#c0caf5">gs</tspan></text>
+  <text x="16" y="218" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#c0caf5">On branch </tspan><tspan fill="#9ece6a">main</tspan><tspan fill="#414868">  working tree clean</tspan></text>
+  <!-- 主题名 -->
+  <text x="16" y="242" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="10" fill="#414868">Tokyo Night · 光标</text>
+  <rect x="96" y="232" width="7" height="13" fill="#c0caf5"/>
+</svg>

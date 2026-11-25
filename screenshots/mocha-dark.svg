@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img" aria-label="Mocha Dark 预览">
+  <rect width="480" height="260" rx="10" fill="#1e1e2e"/>
+  <!-- 标签栏 -->
+  <rect x="8" y="8" width="120" height="26" rx="6" fill="#181825"/>
+  <circle cx="22" cy="21" r="4" fill="#f38ba8"/>
+  <text x="34" y="26" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="11" fill="#cdd6f4">Git Bash</text>
+  <rect x="0" y="40" width="480" height="4" fill="#1e1e2e"/>
+  <!-- 终端内容 -->
+  <rect x="8" y="50" width="464" height="200" rx="6" fill="#1e1e2e" stroke="#181825"/>
+  <text x="16" y="86" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#a6e3a1">~/projects/warm-terminal</tspan><tspan fill="#94e2d5"> (main)</tspan></text>
+  <text x="16" y="108" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#cdd6f4">$ </tspan><tspan fill="#cdd6f4">lt</tspan></text>
+  <text x="16" y="130" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#89b4fa"> 󰉋 bash</tspan><tspan fill="#89b4fa">   󰉋 scripts</tspan><tspan fill="#89b4fa">   󰉋 themes</tspan></text>
+  <text x="16" y="152" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#cdd6f4"> 󰈔 README.md</tspan><tspan fill="#f9e2af">   󰈔 LICENSE</tspan></text>
+  <text x="16" y="174" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#cba6f7">  settings.json</tspan></text>
+  <text x="16" y="196" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#cdd6f4">$ </tspan><tspan fill="#cdd6f4">gs</tspan></text>
+  <text x="16" y="218" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#cdd6f4">On branch </tspan><tspan fill="#a6e3a1">main</tspan><tspan fill="#585b70">  working tree clean</tspan></text>
+  <!-- 主题名 -->
+  <text x="16" y="242" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="10" fill="#585b70">Mocha Dark · 光标</text>
+  <rect x="96" y="232" width="7" height="13" fill="#f5e0dc"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img" aria-label="Latte Warm 预览">
+  <rect width="480" height="260" rx="10" fill="#f3ead9"/>
+  <!-- 标签栏 -->
+  <rect x="8" y="8" width="120" height="26" rx="6" fill="#e9dcc6"/>
+  <circle cx="22" cy="21" r="4" fill="#d20f39"/>
+  <text x="34" y="26" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="11" fill="#4c4f69">Git Bash</text>
+  <rect x="0" y="40" width="480" height="4" fill="#f3ead9"/>
+  <!-- 终端内容 -->
+  <rect x="8" y="50" width="464" height="200" rx="6" fill="#f3ead9" stroke="#e9dcc6"/>
+  <text x="16" y="86" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#40a02b">~/projects/warm-terminal</tspan><tspan fill="#179299"> (main)</tspan></text>
+  <text x="16" y="108" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#4c4f69">$ </tspan><tspan fill="#4c4f69">lt</tspan></text>
+  <text x="16" y="130" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#1e66f5"> 󰉋 bash</tspan><tspan fill="#1e66f5">   󰉋 scripts</tspan><tspan fill="#1e66f5">   󰉋 themes</tspan></text>
+  <text x="16" y="152" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#4c4f69"> 󰈔 README.md</tspan><tspan fill="#df8e1d">   󰈔 LICENSE</tspan></text>
+  <text x="16" y="174" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#ea76cb">  settings.json</tspan></text>
+  <text x="16" y="196" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#4c4f69">$ </tspan><tspan fill="#4c4f69">gs</tspan></text>
+  <text x="16" y="218" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#4c4f69">On branch </tspan><tspan fill="#40a02b">main</tspan><tspan fill="#6c6f85">  working tree clean</tspan></text>
+  <!-- 主题名 -->
+  <text x="16" y="242" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="10" fill="#6c6f85">Latte Warm · 光标</text>
+  <rect x="96" y="232" width="7" height="13" fill="#dc8a78"/>
+</svg>
