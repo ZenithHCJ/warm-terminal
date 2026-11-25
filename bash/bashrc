@@ -1,0 +1,62 @@
+# ============================================================
+#  Warm Terminal — Git Bash 配置
+#  https://github.com/<your-name>/warm-terminal
+# ============================================================
+#  安装方式： bash scripts/install.sh
+#  自定义：   修改下面的 TOOLS_BIN 指向你自己的工具目录
+# ============================================================
+
+# ---- 工具目录（eza / bat / fzf / zoxide / lazygit 所在位置）----
+TOOLS_BIN="${TOOLS_BIN:-/d/Tools/bin}"
+[ -d "$TOOLS_BIN" ] && export PATH="$TOOLS_BIN:$PATH"
+
+# ---- zoxide：智能 cd ---- 
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init bash)"
+fi
+
+# ---- 更好用的 ls / cat ----
+if command -v eza >/dev/null 2>&1; then
+    alias ls='eza --icons --group-directories-first'
+    alias ll='eza -l --icons --group-directories-first'
+    alias la='eza -la --icons --group-directories-first'
+    alias lt='eza --tree --level=2 --icons --group-directories-first'
+fi
+if command -v bat >/dev/null 2>&1; then
+    alias cat='bat'
+fi
+
+# ---- git 简写 ----
+alias gs='git status'
+alias gd='git diff'
+alias gl='git log --oneline --graph --decorate -20'
+alias lg='lazygit'
+
+# ---- fzf 外观（跟随浅色暖调主题）----
+export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border --info=inline --color=bg+:#e9dcc6,bg:#f3ead9,spinner:#dc8a78,hl:#d20f39,fg:#4c4f69,header:#179299,info:#df8e1d,pointer:#ea76cb,marker:#40a02b,fg+:#4c4f69,prompt:#1e66f5,hl+:#d20f39,border:#c9b89a'
+
+# ---- pay-respects：输错命令后敲 fuck 自动纠正 ----
+if command -v pay-respects >/dev/null 2>&1; then
+    eval "$(pay-respects bash --alias fuck)"
+fi
+
+# ---- 终端提示符：简洁版（去掉 用户名@主机名，两行式）----
+PS1='\[\033]0;${PWD}\007\]'                 # 窗口标题显示当前目录
+PS1="$PS1"'\n'
+PS1="$PS1"'\[\033[32m\]\w\[\033[0m\]'        # 绿色当前目录（~ 表示家目录）
+if declare -F __git_ps1 >/dev/null 2>&1; then
+    PS1="$PS1"'\[\033[36m\]`__git_ps1 " (%s)"`\[\033[0m\]'   # git 分支
+fi
+PS1="$PS1"'\n$ '
+
+# ---- mt：一键在当前目录打开美化终端（Windows Terminal + Git Bash）----
+# 用法： mt          在当前目录打开
+#        mt /e/xxx   在指定目录打开
+mt() {
+    local dir="${1:-$PWD}"
+    if command -v wt >/dev/null 2>&1; then
+        wt -d "$dir" -p "Git Bash"
+    else
+        "/d/Tools/WindowsTerminal/wt.exe" -d "$dir" -p "Git Bash"
+    fi
+}

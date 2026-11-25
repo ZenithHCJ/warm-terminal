@@ -1,0 +1,15 @@
+# 系统/编辑器垃圾
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+*.bak-*
+*.swp
+*~
+
+# 不要把家目录配置里的私密东西带进来
+.ssh/
+.env
+*.pem
+*.key
+*.log
