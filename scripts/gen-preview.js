@@ -4,7 +4,10 @@
  *   screenshots/<theme>.svg    单主题预览
  *   screenshots/overview.svg   8 套主题总览（README 顶部用）
  *
- * 用法： node scripts/gen-preview.js
+ * 用法：
+ *   node scripts/gen-preview.js                        # 用本机字体
+ *   node scripts/gen-preview.js --font "A, B, mono"    # 指定字体（与 CI 一致）
+ *   npm run preview                                    # 等价于上面那条 Nerd Font 版本
  */
 const fs = require('fs');
 const path = require('path');
@@ -14,8 +17,13 @@ const themesDir = path.join(root, 'themes');
 const outDir = path.join(root, 'screenshots');
 fs.mkdirSync(outDir, { recursive: true });
 
-// 允许覆盖字体（CI 里用 Nerd Font 渲染图标）
+// 字体优先级：--font 参数 > PREVIEW_FONT 环境变量 > 本机默认
+const fontArg = (() => {
+  const i = process.argv.indexOf('--font');
+  return i > -1 ? process.argv[i + 1] : undefined;
+})();
 const FONT =
+  fontArg ||
   process.env.PREVIEW_FONT ||
   `ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace`;
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

@@ -27,7 +27,7 @@
 | ![One Dark](screenshots/one-dark.svg) **One Dark** `one-dark` | 经典 Atom 灰蓝 · 深色 |
 
 > 预览图由 `scripts/gen-preview.js` 根据主题色值直接生成（SVG + PNG，不依赖手动截图）。
-> 改了颜色后重新生成：`node scripts/gen-preview.js`，再用 Edge 无头模式截一张 PNG 总览。
+> 改了颜色后重新生成：`npm run preview`（与 CI 完全一致，不会产生额外 diff）。
 > 推送 `themes/*.json` 后 GitHub Actions 也会自动重生成并提交（`.github/workflows/preview.yml`）。
 
 ## ✨ 特性
@@ -84,7 +84,8 @@ warm-terminal/
 │   ├── apply-theme.sh                # 切换主题
 │   ├── gen-colors.js                 # 主题 → ~/.warm-terminal/colors.sh
 │   ├── build-wt-settings.js          # base + 主题 → settings.json
-│   └── gen-preview.js                # 主题 → screenshots/<name>.svg + overview.svg/.png
+│   ├── gen-preview.js                # 主题 → screenshots/<name>.svg + overview.svg
+├── package.json                      # npm run preview / theme 等快捷命令
 └── screenshots/                      # 自动生成的预览图
 ```
 
@@ -187,7 +188,7 @@ bash scripts/apply-theme.sh tokyo-night
 ```
 
 ```bash
-node scripts/gen-preview.js            # 顺便生成预览图（push 后 CI 也会自动跑）
+npm run preview                        # 生成预览图（与 CI 同字体，产物一致）
 bash scripts/apply-theme.sh my-theme
 ```
 

@@ -13,3 +13,7 @@ desktop.ini
 *.pem
 *.key
 *.log
+
+# node_modules（本项目没有依赖，但 npm i 可能会创建）
+node_modules/
+package-lock.json

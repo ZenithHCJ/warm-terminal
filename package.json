@@ -1,0 +1,14 @@
+{
+  "name": "warm-terminal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "带主题系统的 Windows 终端配置：Windows Terminal + Git Bash",
+  "scripts": {
+    "preview": "node scripts/gen-preview.js --font \"JetBrainsMono NF, DejaVu Sans Mono, monospace\"",
+    "preview:local": "node scripts/gen-preview.js",
+    "themes": "bash scripts/apply-theme.sh",
+    "theme": "bash scripts/apply-theme.sh",
+    "build:wt": "node scripts/build-wt-settings.js themes/latte-warm.json windows-terminal/settings.json"
+  },
+  "license": "MIT"
+}
