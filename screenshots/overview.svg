@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="954" height="1064" viewBox="0 0 954 1064">
+  <rect width="954" height="1064" fill="#f6f4ef"/>
+  <text x="26" y="34" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="17" fill="#4c4f69" font-weight="600">Warm Terminal</text>
+  <text x="174" y="34" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12" fill="#8c8fa1">8 themes · Windows Terminal + Git Bash</text>
+  <g transform="translate(26,52)">
+      <rect x="-1" y="-1" width="442" height="232" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="230" rx="10" fill="#282a36"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#21222c"/>
+    <rect x="0" y="20" width="440" height="10" fill="#21222c"/>
+    <circle cx="16" cy="15" r="3.5" fill="#ff5555"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#f8f8f2">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#282a36"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#50fa7b">~/projects/warm-terminal</tspan><tspan fill="#8be9fd"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#f8f8f2">$ </tspan><tspan fill="#f8f8f2">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#bd93f9"> 󰉋 bash</tspan><tspan fill="#bd93f9">    󰉋 scripts</tspan><tspan fill="#bd93f9">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#f8f8f2"> 󰈔 README.md</tspan><tspan fill="#f1fa8c">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#ff79c6"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#f8f8f2">$ </tspan><tspan fill="#f8f8f2">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#f8f8f2">On branch </tspan><tspan fill="#50fa7b">main</tspan><tspan fill="#6272a4">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#6272a4">Dracula</text>
+    <rect x="388" y="206" width="6" height="12" fill="#f8f8f2"/>
+    </g>
+  <g transform="translate(488,52)">
+      <rect x="-1" y="-1" width="442" height="232" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="230" rx="10" fill="#fbf1c7"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#f2e5bc"/>
+    <rect x="0" y="20" width="440" height="10" fill="#f2e5bc"/>
+    <circle cx="16" cy="15" r="3.5" fill="#cc241d"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#3c3836">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#fbf1c7"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#98971a">~/projects/warm-terminal</tspan><tspan fill="#689d6a"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#3c3836">$ </tspan><tspan fill="#3c3836">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#458588"> 󰉋 bash</tspan><tspan fill="#458588">    󰉋 scripts</tspan><tspan fill="#458588">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#3c3836"> 󰈔 README.md</tspan><tspan fill="#d79921">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#b16286"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#3c3836">$ </tspan><tspan fill="#3c3836">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#3c3836">On branch </tspan><tspan fill="#98971a">main</tspan><tspan fill="#928374">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#928374">Gruvbox Light</text>
+    <rect x="388" y="206" width="6" height="12" fill="#282828"/>
+    </g>
+  <g transform="translate(26,304)">
+      <rect x="-1" y="-1" width="442" height="232" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="230" rx="10" fill="#f3ead9"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#e9dcc6"/>
+    <rect x="0" y="20" width="440" height="10" fill="#e9dcc6"/>
+    <circle cx="16" cy="15" r="3.5" fill="#d20f39"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#4c4f69">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#f3ead9"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#40a02b">~/projects/warm-terminal</tspan><tspan fill="#179299"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#4c4f69">$ </tspan><tspan fill="#4c4f69">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#1e66f5"> 󰉋 bash</tspan><tspan fill="#1e66f5">    󰉋 scripts</tspan><tspan fill="#1e66f5">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#4c4f69"> 󰈔 README.md</tspan><tspan fill="#df8e1d">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#ea76cb"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#4c4f69">$ </tspan><tspan fill="#4c4f69">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#4c4f69">On branch </tspan><tspan fill="#40a02b">main</tspan><tspan fill="#6c6f85">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#6c6f85">Latte Warm</text>
+    <rect x="388" y="206" width="6" height="12" fill="#dc8a78"/>
+    </g>
+  <g transform="translate(488,304)">
+      <rect x="-1" y="-1" width="442" height="232" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="230" rx="10" fill="#1e1e2e"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#181825"/>
+    <rect x="0" y="20" width="440" height="10" fill="#181825"/>
+    <circle cx="16" cy="15" r="3.5" fill="#f38ba8"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#cdd6f4">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#1e1e2e"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#a6e3a1">~/projects/warm-terminal</tspan><tspan fill="#94e2d5"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#cdd6f4">$ </tspan><tspan fill="#cdd6f4">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#89b4fa"> 󰉋 bash</tspan><tspan fill="#89b4fa">    󰉋 scripts</tspan><tspan fill="#89b4fa">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#cdd6f4"> 󰈔 README.md</tspan><tspan fill="#f9e2af">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#cba6f7"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#cdd6f4">$ </tspan><tspan fill="#cdd6f4">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#cdd6f4">On branch </tspan><tspan fill="#a6e3a1">main</tspan><tspan fill="#585b70">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#585b70">Mocha Dark</text>
+    <rect x="388" y="206" width="6" height="12" fill="#f5e0dc"/>
+    </g>
+  <g transform="translate(26,556)">
+      <rect x="-1" y="-1" width="442" height="232" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="230" rx="10" fill="#2e3440"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#292e39"/>
+    <rect x="0" y="20" width="440" height="10" fill="#292e39"/>
+    <circle cx="16" cy="15" r="3.5" fill="#bf616a"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#d8dee9">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#2e3440"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#a3be8c">~/projects/warm-terminal</tspan><tspan fill="#88c0d0"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#d8dee9">$ </tspan><tspan fill="#d8dee9">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#81a1c1"> 󰉋 bash</tspan><tspan fill="#81a1c1">    󰉋 scripts</tspan><tspan fill="#81a1c1">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#d8dee9"> 󰈔 README.md</tspan><tspan fill="#ebcb8b">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#b48ead"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#d8dee9">$ </tspan><tspan fill="#d8dee9">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#d8dee9">On branch </tspan><tspan fill="#a3be8c">main</tspan><tspan fill="#4c566a">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#4c566a">Nord</text>
+    <rect x="388" y="206" width="6" height="12" fill="#d8dee9"/>
+    </g>
+  <g transform="translate(488,556)">
+      <rect x="-1" y="-1" width="442" height="232" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="230" rx="10" fill="#282c34"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#21252b"/>
+    <rect x="0" y="20" width="440" height="10" fill="#21252b"/>
+    <circle cx="16" cy="15" r="3.5" fill="#e06c75"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#abb2bf">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#282c34"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#98c379">~/projects/warm-terminal</tspan><tspan fill="#56b6c2"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#abb2bf">$ </tspan><tspan fill="#abb2bf">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#61afef"> 󰉋 bash</tspan><tspan fill="#61afef">    󰉋 scripts</tspan><tspan fill="#61afef">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#abb2bf"> 󰈔 README.md</tspan><tspan fill="#e5c07b">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#c678dd"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#abb2bf">$ </tspan><tspan fill="#abb2bf">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#abb2bf">On branch </tspan><tspan fill="#98c379">main</tspan><tspan fill="#5c6370">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#5c6370">One Dark</text>
+    <rect x="388" y="206" width="6" height="12" fill="#528bff"/>
+    </g>
+  <g transform="translate(26,808)">
+      <rect x="-1" y="-1" width="442" height="232" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="230" rx="10" fill="#faf4ed"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#fffaf3"/>
+    <rect x="0" y="20" width="440" height="10" fill="#fffaf3"/>
+    <circle cx="16" cy="15" r="3.5" fill="#b4637a"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#575279">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#faf4ed"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#286983">~/projects/warm-terminal</tspan><tspan fill="#56949f"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">$ </tspan><tspan fill="#575279">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#286983"> 󰉋 bash</tspan><tspan fill="#286983">    󰉋 scripts</tspan><tspan fill="#286983">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279"> 󰈔 README.md</tspan><tspan fill="#ea9d34">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#907aa9"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">$ </tspan><tspan fill="#575279">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">On branch </tspan><tspan fill="#286983">main</tspan><tspan fill="#797593">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#797593">Rosé Pine Dawn</text>
+    <rect x="388" y="206" width="6" height="12" fill="#cecacd"/>
+    </g>
+  <g transform="translate(488,808)">
+      <rect x="-1" y="-1" width="442" height="232" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="230" rx="10" fill="#1a1b26"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#16161e"/>
+    <rect x="0" y="20" width="440" height="10" fill="#16161e"/>
+    <circle cx="16" cy="15" r="3.5" fill="#f7768e"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#c0caf5">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#1a1b26"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#9ece6a">~/projects/warm-terminal</tspan><tspan fill="#7dcfff"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#c0caf5">$ </tspan><tspan fill="#c0caf5">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#7aa2f7"> 󰉋 bash</tspan><tspan fill="#7aa2f7">    󰉋 scripts</tspan><tspan fill="#7aa2f7">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#c0caf5"> 󰈔 README.md</tspan><tspan fill="#e0af68">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#bb9af7"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#c0caf5">$ </tspan><tspan fill="#c0caf5">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#c0caf5">On branch </tspan><tspan fill="#9ece6a">main</tspan><tspan fill="#414868">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#414868">Tokyo Night</text>
+    <rect x="388" y="206" width="6" height="12" fill="#c0caf5"/>
+    </g>
+</svg>

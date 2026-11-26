@@ -1,20 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img" aria-label="Rosé Pine Dawn 预览">
-  <rect width="480" height="260" rx="10" fill="#faf4ed"/>
-  <!-- 标签栏 -->
-  <rect x="8" y="8" width="120" height="26" rx="6" fill="#fffaf3"/>
-  <circle cx="22" cy="21" r="4" fill="#b4637a"/>
-  <text x="34" y="26" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="11" fill="#575279">Git Bash</text>
-  <rect x="0" y="40" width="480" height="4" fill="#faf4ed"/>
-  <!-- 终端内容 -->
-  <rect x="8" y="50" width="464" height="200" rx="6" fill="#faf4ed" stroke="#fffaf3"/>
-  <text x="16" y="86" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#286983">~/projects/warm-terminal</tspan><tspan fill="#56949f"> (main)</tspan></text>
-  <text x="16" y="108" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#575279">$ </tspan><tspan fill="#575279">lt</tspan></text>
-  <text x="16" y="130" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#286983"> 󰉋 bash</tspan><tspan fill="#286983">   󰉋 scripts</tspan><tspan fill="#286983">   󰉋 themes</tspan></text>
-  <text x="16" y="152" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#575279"> 󰈔 README.md</tspan><tspan fill="#ea9d34">   󰈔 LICENSE</tspan></text>
-  <text x="16" y="174" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#907aa9">  settings.json</tspan></text>
-  <text x="16" y="196" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#575279">$ </tspan><tspan fill="#575279">gs</tspan></text>
-  <text x="16" y="218" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="13"><tspan fill="#575279">On branch </tspan><tspan fill="#286983">main</tspan><tspan fill="#797593">  working tree clean</tspan></text>
-  <!-- 主题名 -->
-  <text x="16" y="242" font-family="ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace" font-size="10" fill="#797593">Rosé Pine Dawn · 光标</text>
-  <rect x="96" y="232" width="7" height="13" fill="#cecacd"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="230" viewBox="0 0 440 230">
+  <g><rect x="0" y="0" width="440" height="230" rx="10" fill="#faf4ed"/>
+    <rect x="0" y="0" width="440" height="30" rx="10" fill="#fffaf3"/>
+    <rect x="0" y="20" width="440" height="10" fill="#fffaf3"/>
+    <circle cx="16" cy="15" r="3.5" fill="#b4637a"/>
+    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#575279">Git Bash</text>
+    <rect x="0" y="30" width="440" height="2" fill="#faf4ed"/>
+    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#286983">~/projects/warm-terminal</tspan><tspan fill="#56949f"> (main)</tspan></text>
+    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">$ </tspan><tspan fill="#575279">lt</tspan></text>
+    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#286983"> 󰉋 bash</tspan><tspan fill="#286983">    󰉋 scripts</tspan><tspan fill="#286983">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279"> 󰈔 README.md</tspan><tspan fill="#ea9d34">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#907aa9"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">$ </tspan><tspan fill="#575279">gs</tspan></text>
+    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">On branch </tspan><tspan fill="#286983">main</tspan><tspan fill="#797593">  clean</tspan></text>
+    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#797593">Rosé Pine Dawn</text>
+    <rect x="388" y="206" width="6" height="12" fill="#cecacd"/></g>
 </svg>

@@ -8,7 +8,7 @@
 [![Themes](https://img.shields.io/badge/themes-8-D20F39)](#-主题画廊)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-![Latte Warm](screenshots/latte-warm.svg)
+![8 套主题总览](screenshots/overview.png)
 
 ---
 
@@ -25,7 +25,8 @@
 | ![Dracula](screenshots/dracula.svg) **Dracula** `dracula` | 紫黑高对比 · 深色 |
 | ![One Dark](screenshots/one-dark.svg) **One Dark** `one-dark` | 经典 Atom 灰蓝 · 深色 |
 
-> 预览图由 `scripts/gen-preview.js` 根据主题色值直接生成（SVG，不依赖截图）。
+> 预览图由 `scripts/gen-preview.js` 根据主题色值直接生成（SVG + PNG，不依赖手动截图）。
+> 改了颜色后重新生成：`node scripts/gen-preview.js`，再用 Edge 无头模式截一张 PNG 总览。
 
 ## ✨ 特性
 
@@ -81,7 +82,7 @@ warm-terminal/
 │   ├── apply-theme.sh                # 切换主题
 │   ├── gen-colors.js                 # 主题 → ~/.warm-terminal/colors.sh
 │   ├── build-wt-settings.js          # base + 主题 → settings.json
-│   └── gen-preview.js                # 主题 → screenshots/*.svg
+│   └── gen-preview.js                # 主题 → screenshots/<name>.svg + overview.svg/.png
 └── screenshots/                      # 自动生成的预览图
 ```
 

@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
- * 为每个主题生成一张 SVG 预览图（不依赖截图，README 里直接显示）。
+ * 生成主题预览图
+ *   screenshots/<theme>.svg    单主题预览
+ *   screenshots/overview.svg   8 套主题总览（README 顶部用）
  *
  * 用法： node scripts/gen-preview.js
- * 输出： screenshots/<theme>.svg
  */
 const fs = require('fs');
 const path = require('path');
@@ -13,58 +14,92 @@ const themesDir = path.join(root, 'themes');
 const outDir = path.join(root, 'screenshots');
 fs.mkdirSync(outDir, { recursive: true });
 
+const FONT = `ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace`;
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-function preview(theme) {
+/** 一个主题面板的内容（不含外层 <svg>） */
+function panel(theme, w, h) {
   const s = theme.terminal.scheme;
   const tabBg = theme.terminal.appTheme.tab.background;
   const rowBg = theme.terminal.appTheme.tabRow.background;
-  const mono = 'ui-monospace, &quot;LXGWWenKaiMono NF&quot;, Consolas, monospace';
-  const lineH = 22;
-  const x = 16;
+  const pad = 16;
+  const lineH = 21;
+  const top = 62;
 
-  // 模拟一段终端内容：提示符 + eza 列表 + git 输出
   const lines = [
-    { t: 1, parts: [[`~/projects/warm-terminal`, s.green], [` (main)`, s.cyan]] },
-    { t: 1, parts: [[`$ `, s.foreground], [`lt`, s.foreground]] },
-    { t: 0, parts: [[` 󰉋 bash`, s.blue], [`   󰉋 scripts`, s.blue], [`   󰉋 themes`, s.blue]] },
-    { t: 0, parts: [[` 󰈔 README.md`, s.foreground], [`   󰈔 LICENSE`, s.yellow]] },
-    { t: 0, parts: [[`  settings.json`, s.purple]] },
-    { t: 1, parts: [[`$ `, s.foreground], [`gs`, s.foreground]] },
-    { t: 0, parts: [[`On branch `, s.foreground], [`main`, s.green], [`  working tree clean`, s.brightBlack]] },
+    [[`~/projects/warm-terminal`, s.green], [` (main)`, s.cyan]],
+    [[`$ `, s.foreground], [`lt`, s.foreground]],
+    [[` 󰉋 bash`, s.blue], [`    󰉋 scripts`, s.blue], [`    󰉋 themes`, s.blue]],
+    [[` 󰈔 README.md`, s.foreground], [`    󰈔 LICENSE`, s.yellow]],
+    [[` 󰈞 settings.json`, s.purple]],
+    [[`$ `, s.foreground], [`gs`, s.foreground]],
+    [[`On branch `, s.foreground], [`main`, s.green], [`  clean`, s.brightBlack]],
   ];
 
   const body = lines
-    .map((l, i) => {
-      const y = 86 + i * lineH;
-      const spans = l.parts
+    .map((parts, i) => {
+      const spans = parts
         .map(([txt, color]) => `<tspan fill="${color}">${esc(txt)}</tspan>`)
         .join('');
-      return `<text x="${x}" y="${y}" font-family="${mono}" font-size="13">${spans}</text>`;
+      return `<text x="${pad + 10}" y="${top + 20 + i * lineH}" font-family="${FONT}" font-size="12.5">${spans}</text>`;
     })
-    .join('\n  ');
+    .join('\n    ');
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img" aria-label="${esc(theme.label)} 预览">
-  <rect width="480" height="260" rx="10" fill="${s.background}"/>
-  <!-- 标签栏 -->
-  <rect x="8" y="8" width="120" height="26" rx="6" fill="${tabBg}"/>
-  <circle cx="22" cy="21" r="4" fill="${s.red}"/>
-  <text x="34" y="26" font-family="${mono}" font-size="11" fill="${s.foreground}">Git Bash</text>
-  <rect x="0" y="40" width="480" height="4" fill="${rowBg}"/>
-  <!-- 终端内容 -->
-  <rect x="8" y="50" width="464" height="200" rx="6" fill="${s.background}" stroke="${tabBg}"/>
+  return `<rect x="0" y="0" width="${w}" height="${h}" rx="10" fill="${s.background}"/>
+    <rect x="0" y="0" width="${w}" height="30" rx="10" fill="${tabBg}"/>
+    <rect x="0" y="20" width="${w}" height="10" fill="${tabBg}"/>
+    <circle cx="16" cy="15" r="3.5" fill="${s.red}"/>
+    <text x="27" y="19" font-family="${FONT}" font-size="10.5" fill="${s.foreground}">Git Bash</text>
+    <rect x="0" y="30" width="${w}" height="2" fill="${rowBg}"/>
+    ${body}
+    <text x="${pad + 10}" y="${h - 14}" font-family="${FONT}" font-size="10" fill="${s.brightBlack}">${esc(theme.label)}</text>
+    <rect x="${w - 52}" y="${h - 24}" width="6" height="12" fill="${s.cursorColor}"/>`;
+}
+
+const svgWrap = (w, h, body) =>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
   ${body}
-  <!-- 主题名 -->
-  <text x="${x}" y="242" font-family="${mono}" font-size="10" fill="${s.brightBlack}">${esc(theme.label)} · 光标</text>
-  <rect x="96" y="232" width="7" height="13" fill="${s.cursorColor}"/>
 </svg>
 `;
+
+// ---------- 单主题 ----------
+const files = fs.readdirSync(themesDir).filter((f) => f.endsWith('.json'));
+const themes = files.map((f) => JSON.parse(fs.readFileSync(path.join(themesDir, f), 'utf8')));
+
+for (const t of themes) {
+  const w = 440, h = 230;
+  fs.writeFileSync(
+    path.join(outDir, `${t.name}.svg`),
+    svgWrap(w, h, `<g>${panel(t, w, h)}</g>`)
+  );
+  console.log(`已生成 screenshots/${t.name}.svg`);
 }
 
-const files = fs.readdirSync(themesDir).filter((f) => f.endsWith('.json'));
-for (const f of files) {
-  const theme = JSON.parse(fs.readFileSync(path.join(themesDir, f), 'utf8'));
-  const out = path.join(outDir, `${theme.name}.svg`);
-  fs.writeFileSync(out, preview(theme));
-  console.log(`已生成 screenshots/${theme.name}.svg`);
-}
+// ---------- 总览 ----------
+const cols = 2;
+const cellW = 440, cellH = 230, gap = 22, margin = 26, titleH = 52;
+const rows = Math.ceil(themes.length / cols);
+const W = margin * 2 + cols * cellW + (cols - 1) * gap;
+const H = titleH + margin + rows * cellH + (rows - 1) * gap;
+
+const cells = themes
+  .map((t, i) => {
+    const x = margin + (i % cols) * (cellW + gap);
+    const y = titleH + Math.floor(i / cols) * (cellH + gap);
+    return `<g transform="translate(${x},${y})">
+      <rect x="-1" y="-1" width="${cellW + 2}" height="${cellH + 2}" rx="11" fill="none" stroke="#00000018" stroke-width="2"/>
+      ${panel(t, cellW, cellH)}
+    </g>`;
+  })
+  .join('\n  ');
+
+const overview = svgWrap(
+  W,
+  H,
+  `<rect width="${W}" height="${H}" fill="#f6f4ef"/>
+  <text x="${margin}" y="34" font-family="${FONT}" font-size="17" fill="#4c4f69" font-weight="600">Warm Terminal</text>
+  <text x="${margin + 148}" y="34" font-family="${FONT}" font-size="12" fill="#8c8fa1">8 themes · Windows Terminal + Git Bash</text>
+  ${cells}`
+);
+fs.writeFileSync(path.join(outDir, 'overview.svg'), overview);
+console.log(`已生成 screenshots/overview.svg  (${W}×${H})`);
