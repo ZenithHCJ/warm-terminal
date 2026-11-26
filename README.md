@@ -70,6 +70,8 @@ themes/<name>.json          ← 唯一数据源（配色 / 提示符色 / fzf �
 
 ```
 warm-terminal/
+├── AGENTS.md                         # 给 AI 代理的执行手册（步骤 + 验证断言）
+├── README.md  LICENSE  package.json
 ├── bash/bashrc                       # → ~/.bashrc
 ├── themes/
 │   ├── latte-warm.json               # 默认主题（浅色）
@@ -85,11 +87,47 @@ warm-terminal/
 │   ├── gen-colors.js                 # 主题 → ~/.warm-terminal/colors.sh
 │   ├── build-wt-settings.js          # base + 主题 → settings.json
 │   └── gen-preview.js                # 主题 → screenshots/<name>.svg + overview.svg
-├── package.json                      # npm run preview / theme 等快捷命令
+├── deploy/
+│   └── deploy.ps1                    # 一键部署（无 winget 也能跑，含 -DryRun）
+├── docs/
+│   ├── DESIGN.md                     # 设计文档：为什么这样组织模块
+│   └── FONTS.md                      # 字体安装 / 验证 / 排错
+├── .github/workflows/preview.yml     # 主题变更 → 自动重生成预览图
 └── screenshots/                      # 自动生成的预览图
 ```
 
-## 🚀 安装
+各模块的职责边界与「谁能改谁」见 [docs/DESIGN.md §3](docs/DESIGN.md)。
+
+## 📚 文档索引
+
+| 文档 | 给谁看 | 内容 |
+|---|---|---|
+| 本页 README | 人 | 是什么、怎么装、怎么换主题 |
+| [AGENTS.md](AGENTS.md) | **AI 代理** | 逐步执行手册：环境探测 → 安装 → 验证断言 → 失败分支 → 回滚 |
+| [docs/DESIGN.md](docs/DESIGN.md) | 维护者 | 为什么这么设计：单一数据源、模块职责、配色四层模型、踩过的坑 |
+| [docs/FONTS.md](docs/FONTS.md) | 所有人 | **字体怎么加**：三种安装方式、注册表原理、验证方法、常见问题 |
+
+## ⚡ 一键部署
+
+新机器 / 交给 AI 时用这个（幂等、自动备份、支持 `-DryRun`）：
+
+```powershell
+# Windows PowerShell 或 PowerShell 7 都行
+git clone https://github.com/ZenithHCJ/warm-terminal.git $HOME\projects\warm-terminal
+cd $HOME\projects\warm-terminal
+
+pwsh -File deploy\deploy.ps1 -DryRun            # 只看计划，不改任何东西
+pwsh -File deploy\deploy.ps1                    # 默认主题 latte-warm
+pwsh -File deploy\deploy.ps1 -Theme tokyo-night -Font "JetBrainsMono NF"
+```
+
+它会依次处理：Git Bash 探测（Git for Windows / MSYS2 / Scoop 都认）→ Node 检查（缺失可降级）
+→ eza/bat/fzf/zoxide/lazygit（**无 winget 也能装**，直接拉 GitHub Release）→ 字体检测
+→ `~/.bashrc` + `~/.warm-terminal/` → Windows Terminal `settings.json`。
+
+> 想要 AI 帮你做？直接把 [`AGENTS.md`](AGENTS.md) 丢给它。
+
+## 🚀 手动安装
 
 ### 1. 装字体（必须，否则图标是方块）
 

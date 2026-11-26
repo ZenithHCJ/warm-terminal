@@ -4,6 +4,8 @@
 # ============================================================
 
 # ---- 工具目录（eza / bat / fzf / zoxide / lazygit 所在位置）----
+# 优先级：环境变量 TOOLS_BIN > ~/.warm-terminal/tools.sh（部署脚本写）> 默认 /d/Tools/bin
+[ -f "$HOME/.warm-terminal/tools.sh" ] && . "$HOME/.warm-terminal/tools.sh"
 TOOLS_BIN="${TOOLS_BIN:-/d/Tools/bin}"
 [ -d "$TOOLS_BIN" ] && export PATH="$TOOLS_BIN:$PATH"
 
