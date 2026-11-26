@@ -84,7 +84,7 @@ warm-terminal/
 │   ├── apply-theme.sh                # 切换主题
 │   ├── gen-colors.js                 # 主题 → ~/.warm-terminal/colors.sh
 │   ├── build-wt-settings.js          # base + 主题 → settings.json
-│   ├── gen-preview.js                # 主题 → screenshots/<name>.svg + overview.svg
+│   └── gen-preview.js                # 主题 → screenshots/<name>.svg + overview.svg
 ├── package.json                      # npm run preview / theme 等快捷命令
 └── screenshots/                      # 自动生成的预览图
 ```
