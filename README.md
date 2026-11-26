@@ -35,7 +35,7 @@
 | 能力 | 实现 | 效果 |
 |---|---|---|
 | 配色 | Windows Terminal 自定义 colorScheme + 标签栏 theme | 一套 JSON 管全局 |
-| 字体 | `CaskaydiaCove NF` / `Maple Mono NF CN` | 等宽 + 图标（后者原生中文） |
+| 字体 | `LXGW WenKai Mono`（中文优先）/ `Maple Mono NF CN`（中文+图标） | 见 [docs/FONTS.md](docs/FONTS.md) |
 | 提示符 | 纯 `PS1`，双行式 | 去 `user@host`，路径 + git 分支两行 |
 | 文件列表 | [eza](https://github.com/eza-community/eza) | `ls` / `ll` / `la` / `lt` 带图标 |
 | 查看文件 | [bat](https://github.com/sharkdp/bat) | `cat` 语法高亮，跟随主题 |

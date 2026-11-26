@@ -26,7 +26,7 @@
     "profiles": {
         "defaults": {
             "font": {
-                "face": "CaskaydiaCove NF",
+                "face": "LXGW WenKai Mono",
                 "size": 14
             },
             "opacity": 100,

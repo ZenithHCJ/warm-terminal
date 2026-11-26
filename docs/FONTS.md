@@ -15,10 +15,10 @@
 
 | 用途 | 字体名（Windows 里显示的名字） | 中文 | 图标 | 来源 |
 |---|---|---|---|---|
-| 本项目默认 | `CaskaydiaCove NF` | ❌（靠系统 fallback） | ✅ | Nerd Fonts（Cascadia Code 打 NF 补丁） |
+| 本项目默认 | `LXGW WenKai Mono` | ✅ 原生 | ⚠️ 仅部分 PUA（ζ 实测 46946 字形里无 `f07b`/`f1d3`） | [lxgw/LxgwWenKai](https://github.com/lxgw/LxgwWenKai) |
+| 图标专用 | `CaskaydiaCove NF` | ❌ | ✅ | Nerd Fonts（Cascadia Code 打 NF 补丁） |
 | **中文推荐** | `Maple Mono NF CN` | ✅ 原生 | ✅ | [subframe7536/maple-font](https://github.com/subframe7536/maple-font) |
 | 纯英文备选 | `JetBrainsMono NF` | ❌ | ✅ | [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) |
-| 中文（无图标） | `LXGW WenKai Mono` | ✅ 原生 | ❌ | [lxgw/LxgwWenKai](https://github.com/lxgw/LxgwWenKai) |
 
 > ⚠️ **两个常见误区**
 >
