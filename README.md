@@ -35,7 +35,7 @@
 | 能力 | 实现 | 效果 |
 |---|---|---|
 | 配色 | Windows Terminal 自定义 colorScheme + 标签栏 theme | 一套 JSON 管全局 |
-| 字体 | `LXGW WenKai Mono`（中文优先）/ `Maple Mono NF CN`（中文+图标） | 见 [docs/FONTS.md](docs/FONTS.md) |
+| 字体 | 自带配置写的是 `LXGWWenKaiMono NF`（**仅作参考，见下方提醒**） | 等宽 + 中文 + 图标，详情 [docs/FONTS.md](docs/FONTS.md) |
 | 提示符 | 纯 `PS1`，双行式 | 去 `user@host`，路径 + git 分支两行 |
 | 文件列表 | [eza](https://github.com/eza-community/eza) | `ls` / `ll` / `la` / `lt` 带图标 |
 | 查看文件 | [bat](https://github.com/sharkdp/bat) | `cat` 语法高亮，跟随主题 |
@@ -137,7 +137,22 @@ scoop install Maple-Mono-NF-CN      # 中文 + 图标（推荐）
 scoop install CaskaydiaCove-NF      # 只有图标
 ```
 
-或到 [LXGW WenKai](https://github.com/lxgw/LxgwWenKai) 下载安装，确认字体名带 `NF` 后缀。
+或到 [LXGW WenKai](https://github.com/lxgw/LxgwWenKai) 下载安装（注意：官方只出**无图标**的 `LXGWWenKaiMono-Regular.ttf`）。
+
+> ⚠️ **`settings.base.json` 里的字体名只是参考，通常需要换成你自己装了的字体。**
+>
+> 仓库默认写的是 `LXGWWenKaiMono NF` —— 这个名字在 **官方渠道并不存在**（霞鹜文楷没有 NF 版，
+> 这是某个打过补丁的私有文件名）。名字对不上时 Windows 会静默 fallback：不报错，
+> 只是图标变方块、中文用别的字体渲染。
+>
+> 装好字体后直接指定，一行搞定：
+>
+> ```powershell
+> pwsh -File deploy\deploy.ps1 -Font "Maple Mono NF CN"    # 中文 + 图标
+> pwsh -File deploy\deploy.ps1 -Font "CaskaydiaCove NF"    # 只有图标
+> ```
+>
+> 确认名字是否正确：`docs/FONTS.md` §3「怎么确认装好了」。
 
 ### 2. 装依赖工具
 
@@ -234,7 +249,8 @@ bash scripts/apply-theme.sh my-theme
 ## ❓ 常见问题
 
 **图标显示成方块？**
-字体没装或名字不对。`Ctrl+,` → profile 的字体改成你装的 Nerd Font 名（带 `NF`）。
+字体没装，或 `font.face` 写的名字和系统里的家族名不一致（最常见原因，且**不会报错**）。
+先查注册表确认已装的字体名，再用 `-Font` 指定；详见 [docs/FONTS.md](docs/FONTS.md) §3。
 
 **Windows Terminal 配色没变？**
 配色写在 `settings.json` 里，必须**新开窗口/标签**；已有窗口不会热重载。
