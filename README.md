@@ -7,6 +7,7 @@
 [![Shell](https://img.shields.io/badge/shell-Git%20Bash-4EAA25?logo=gnubash&logoColor=white)](#)
 [![Themes](https://img.shields.io/badge/themes-8-D20F39)](#-主题画廊)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Previews](https://github.com/ZenithHCJ/warm-terminal/actions/workflows/preview.yml/badge.svg)](https://github.com/ZenithHCJ/warm-terminal/actions/workflows/preview.yml)
 
 ![8 套主题总览](screenshots/overview.png)
 
@@ -27,6 +28,7 @@
 
 > 预览图由 `scripts/gen-preview.js` 根据主题色值直接生成（SVG + PNG，不依赖手动截图）。
 > 改了颜色后重新生成：`node scripts/gen-preview.js`，再用 Edge 无头模式截一张 PNG 总览。
+> 推送 `themes/*.json` 后 GitHub Actions 也会自动重生成并提交（`.github/workflows/preview.yml`）。
 
 ## ✨ 特性
 
@@ -185,7 +187,7 @@ bash scripts/apply-theme.sh tokyo-night
 ```
 
 ```bash
-node scripts/gen-preview.js            # 顺便生成预览图
+node scripts/gen-preview.js            # 顺便生成预览图（push 后 CI 也会自动跑）
 bash scripts/apply-theme.sh my-theme
 ```
 

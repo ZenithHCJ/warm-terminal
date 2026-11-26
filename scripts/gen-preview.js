@@ -14,7 +14,10 @@ const themesDir = path.join(root, 'themes');
 const outDir = path.join(root, 'screenshots');
 fs.mkdirSync(outDir, { recursive: true });
 
-const FONT = `ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace`;
+// 允许覆盖字体（CI 里用 Nerd Font 渲染图标）
+const FONT =
+  process.env.PREVIEW_FONT ||
+  `ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace`;
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 /** 一个主题面板的内容（不含外层 <svg>） */
