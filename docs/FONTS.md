@@ -13,14 +13,22 @@
 
 因此需要一款 **带 NF 补丁的等宽字体**。本项目默认：
 
-| 用途 | 字体名（Windows 里显示的名字） | 来源 |
-|---|---|---|
-| 默认 | `LXGWWenKaiMono NF` | [LXGW WenKai](https://github.com/lxgw/LxgwWenKai)（霞鹜文楷等宽，中文友好） |
-| 备选 | `JetBrainsMono NF` | [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) |
-| 备选 | `CaskaydiaCove NF` | Nerd Fonts（Cascadia Code 的 NF 版，Win 自带字体打补丁） |
+| 用途 | 字体名（Windows 里显示的名字） | 中文 | 图标 | 来源 |
+|---|---|---|---|---|
+| 本项目默认 | `CaskaydiaCove NF` | ❌（靠系统 fallback） | ✅ | Nerd Fonts（Cascadia Code 打 NF 补丁） |
+| **中文推荐** | `Maple Mono NF CN` | ✅ 原生 | ✅ | [subframe7536/maple-font](https://github.com/subframe7536/maple-font) |
+| 纯英文备选 | `JetBrainsMono NF` | ❌ | ✅ | [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) |
+| 中文（无图标） | `LXGW WenKai Mono` | ✅ 原生 | ❌ | [lxgw/LxgwWenKai](https://github.com/lxgw/LxgwWenKai) |
 
-> ⚠️ **名字必须精确匹配**。Windows 里叫 `CaskaydiaCove NF`，不是 `Cascadia Code`；
-> 叫 `LXGWWenKaiMono NF`，不是 `LXGW WenKai Mono`。写错就静默 fallback —— 不报错，只是图标没了。
+> ⚠️ **两个常见误区**
+>
+> 1. **霞鹜文楷官方没有 Nerd Font 版**。`lxgw/LxgwWenKai` 的 Release 里只有
+>    `LXGWWenKaiMono-{Light,Regular,Medium}.ttf`（无图标），scoop 里对应的是
+>    `scoop install LXGWWenKaiMono`。**不存在** `LXGWWenKaiMono-NF` 这个包或这个名字 ——
+>    网上流传的 `LXGWWenKaiMono NF` 是有人自己用 `font-patcher` 打过补丁的私有文件名。
+>    想中文+图标：用 `Maple Mono NF CN`，或自己 patch。
+> 2. **名字必须精确匹配**。`CaskaydiaCove NF` ≠ `Cascadia Code`；`Maple Mono NF CN`
+>    是**带空格**的家族名。写错不会报错，只会静默 fallback —— 表现为「图标变成方块」。
 
 ---
 
@@ -30,7 +38,9 @@
 
 ```powershell
 scoop bucket add nerd-fonts
-scoop install LXGWWenKaiMono-NF        # 或 JetBrainsMono-NF / CascadiaCode-NF
+scoop install Maple-Mono-NF-CN         # 中文 + 图标（推荐）
+scoop install CaskaydiaCove-NF         # 只有图标（英文）
+scoop install LXGWWenKaiMono           # 只有中文（无图标，别单独用）
 ```
 
 scoop 会同时处理字体文件和系统注册，装完即可用。
@@ -45,7 +55,8 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 ### 方式 C：手动（没有任何包管理器时）
 
 1. 下载 `.ttf`：
-   - 霞鹜文楷：https://github.com/lxgw/LxgwWenKai/releases （找 `LXGWWenKaiMonoNF.ttf`）
+   - Maple Mono NF CN（中文+图标）：https://github.com/subframe7536/maple-font/releases
+   - 霞鹜文楷（**无图标**）：https://github.com/lxgw/LxgwWenKai/releases （`LXGWWenKaiMono-Regular.ttf`）
    - Nerd Fonts 全家桶：https://www.nerdfonts.com/font-downloads
 2. **选中 ttf → 右键 → 安装**（当前用户）或「为所有用户安装」
 3. 或命令行注册（per-user，不需要管理员）：
@@ -53,12 +64,18 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```powershell
 $fontDir = "$env:LOCALAPPDATA\Microsoft\Windows\Fonts"
 New-Item -ItemType Directory $fontDir -Force | Out-Null
-Copy-Item .\LXGWWenKaiMonoNF.ttf $fontDir
+Copy-Item .\MapleMono-NF-CN-Regular.ttf $fontDir
 
-# 注册表登记（名字随意，但建议用家族名 + (TrueType)）
+# 注册表登记（名字随意，但建议用真实家族名 + (TrueType)）
 $key = 'HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Fonts'
-New-ItemProperty $key -Name 'LXGWWenKaiMono NF (TrueType)' `
-  -Value "$fontDir\LXGWWenKaiMonoNF.ttf" -PropertyType String -Force
+New-ItemProperty $key -Name 'Maple Mono NF CN (TrueType)' `
+  -Value "$fontDir\MapleMono-NF-CN-Regular.ttf" -PropertyType String -Force
+
+# 想确认家族名（不确定时用这个读 ttf 内部名字）：
+Add-Type -AssemblyName System.Drawing
+$pfc = New-Object System.Drawing.Text.PrivateFontCollection
+$pfc.AddFontFile("$fontDir\MapleMono-NF-CN-Regular.ttf")
+$pfc.Families | ForEach-Object { $_.Name }
 ```
 
 4. **注销/重开终端**（字体缓存在进程里，重启 Terminal 就够）
@@ -67,7 +84,7 @@ New-ItemProperty $key -Name 'LXGWWenKaiMono NF (TrueType)' `
 
 ```powershell
 # 自动检查；能从 Downloads 找到 ttf 就顺手装好并登记注册表
-pwsh -File deploy\deploy.ps1 -Font "LXGWWenKaiMono NF"
+pwsh -File deploy\deploy.ps1 -Font "Maple Mono NF CN"
 
 # 已经装好了别的 NF 字体，直接指定
 pwsh -File deploy\deploy.ps1 -Font "CaskaydiaCove NF"
@@ -134,7 +151,7 @@ npm run preview:local  # 用本机字体（霞鹜文楷）
 | 现象 | 原因 | 处理 |
 |---|---|---|
 | 图标是 `□` 方块 | 字体不带 NF，或名字写错 | 换 NF 字体 / 校正 `font.face` |
-| 中文变方块 | 字体没有中文字形（如纯 JetBrainsMono） | 用 `LXGWWenKaiMono NF`，或 WT 里配 `"font": {"face": "...", "cellWidth": ...}` 之外改用中文等宽 NF |
+| 中文变方块或宽窄对不齐 | 字体没有中文字形（如 `CaskaydiaCove NF`、`JetBrainsMono NF`），中文走 fallback 字体 | 换 `Maple Mono NF CN`（原生中文 + 图标） |
 | 改了 `font.face` 没变化 | 只改了 `settings.json`（生成物），下次生成被覆盖 | 改 `settings.base.json` |
 | 下拉框里找不到字体 | 字体只装给了另一个用户 / 未登记注册表 | 按上面方式 C 重新登记，重启 Terminal |
 | 字体装了但很矮很宽 | 该字体不是等宽 | 换 Mono 版本（名字里带 `Mono`） |

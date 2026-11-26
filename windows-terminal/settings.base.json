@@ -18,7 +18,7 @@
   {
     "defaults":
     {
-      "font": { "face": "LXGWWenKaiMono NF", "size": 14 },
+      "font": { "face": "CaskaydiaCove NF", "size": 14 },
       "opacity": 100,
       "useAcrylic": false,
       "padding": "14, 10, 14, 10",

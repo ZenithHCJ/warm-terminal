@@ -36,9 +36,9 @@ Write-Host '    scoop install lazygit' -ForegroundColor DarkGray
 Write-Host '    cargo install pay-respects' -ForegroundColor DarkGray
 
 # ---- 字体 ----
-Warn '字体 LXGWWenKaiMono NF (Nerd Font) 需手动安装：'
+Warn '字体需手动安装（推荐 Maple Mono NF CN：中文 + 图标）：'
 Write-Host '    https://github.com/lxgw/LxgwWenKai  +  https://www.nerdfonts.com/font-downloads' -ForegroundColor DarkGray
-Write-Host '    或用 scoop: scoop bucket add nerd-fonts; scoop install LXGWWenKaiMono-NF' -ForegroundColor DarkGray
+Write-Host '    scoop bucket add nerd-fonts; scoop install Maple-Mono-NF-CN' -ForegroundColor DarkGray
 
 Write-Host ''
 Info '依赖安装结束。请重开终端让 PATH 生效。'

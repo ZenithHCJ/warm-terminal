@@ -20,7 +20,8 @@
     依赖工具目录，默认 %LOCALAPPDATA%\warm-terminal\bin，写入 ~/.warm-terminal/tools.sh。
 
 .PARAMETER Font
-    Windows Terminal 字体名，默认 "LXGWWenKaiMono NF"。
+    Windows Terminal 字体名，默认 "CaskaydiaCove NF"。
+    中文+图标请用 "Maple Mono NF CN"（scoop install Maple-Mono-NF-CN）。
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File deploy\deploy.ps1
@@ -32,7 +33,7 @@
 param(
     [string]$Theme = 'latte-warm',
     [string]$ToolsDir,
-    [string]$Font = 'LXGWWenKaiMono NF',
+    [string]$Font = 'CaskaydiaCove NF',
     [switch]$SkipTools,
     [switch]$SkipFont,
     [switch]$SkipGit,
@@ -246,9 +247,10 @@ if ($SkipFont) {
             $nerdCandidates | ForEach-Object { Write-Host "      - $_" -ForegroundColor DarkGray }
         }
         Write-Host '    安装方式（三选一）：' -ForegroundColor DarkGray
-        Write-Host '      scoop bucket add nerd-fonts; scoop install LXGWWenKaiMono-NF' -ForegroundColor DarkGray
+        Write-Host '      scoop bucket add nerd-fonts; scoop install Maple-Mono-NF-CN   # 中文+图标' -ForegroundColor DarkGray
         Write-Host '      winget install --id DEVCOM.JetBrainsMonoNerdFont  （改用 -Font "JetBrainsMono NF"）' -ForegroundColor DarkGray
-        Write-Host '      下载 ttf 双击安装（详见 docs/FONTS.md）' -ForegroundColor DarkGray
+        Write-Host '      scoop install CaskaydiaCove-NF                                # 仅图标' -ForegroundColor DarkGray
+        Write-Host '      下载 ttf 双击安装（详见 docs/FONTS.md，注意霞鹜文楷官方无 NF 版）' -ForegroundColor DarkGray
 
         $ttf = Get-ChildItem (Join-Path $env:USERPROFILE 'Downloads') -Filter '*.ttf' -ErrorAction SilentlyContinue |
                Where-Object { $_.Name -match 'NF|Nerd|Lxgw|LXGW' } | Select-Object -First 1
@@ -314,8 +316,10 @@ if ($nodeCmd) {
     if ($baseJson.profiles.defaults.font.face -ne $Font) {
         Write-Warn2 "settings.base.json 字体将改为 '$Font'"
         Invoke-OrPlan "改写 settings.base.json 的 font.face" {
-            $baseJson.profiles.defaults.font.face = $Font
-            $baseJson | ConvertTo-Json -Depth 20 | Set-Content $basePath -Encoding UTF8
+            # 只替换字符串，不用 ConvertTo-Json 整体重写 —— 否则会打乱原文件格式，git diff 变成全文件重排
+            $raw = Get-Content $basePath -Raw
+            $patched = $raw -replace '"face"\s*:\s*"[^"]*"', ('"face": "' + $Font + '"')
+            Set-Content -Path $basePath -Value $patched -Encoding UTF8 -NoNewline
         }
     }
 

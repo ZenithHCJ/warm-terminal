@@ -35,7 +35,7 @@
 | 能力 | 实现 | 效果 |
 |---|---|---|
 | 配色 | Windows Terminal 自定义 colorScheme + 标签栏 theme | 一套 JSON 管全局 |
-| 字体 | `LXGWWenKaiMono NF`（霞鹜文楷等宽 + Nerd Font） | 中文等宽 + 图标 |
+| 字体 | `CaskaydiaCove NF` / `Maple Mono NF CN` | 等宽 + 图标（后者原生中文） |
 | 提示符 | 纯 `PS1`，双行式 | 去 `user@host`，路径 + git 分支两行 |
 | 文件列表 | [eza](https://github.com/eza-community/eza) | `ls` / `ll` / `la` / `lt` 带图标 |
 | 查看文件 | [bat](https://github.com/sharkdp/bat) | `cat` 语法高亮，跟随主题 |
@@ -133,7 +133,8 @@ pwsh -File deploy\deploy.ps1 -Theme tokyo-night -Font "JetBrainsMono NF"
 
 ```powershell
 scoop bucket add nerd-fonts
-scoop install LXGWWenKaiMono-NF
+scoop install Maple-Mono-NF-CN      # 中文 + 图标（推荐）
+scoop install CaskaydiaCove-NF      # 只有图标
 ```
 
 或到 [LXGW WenKai](https://github.com/lxgw/LxgwWenKai) 下载安装，确认字体名带 `NF` 后缀。

@@ -110,14 +110,18 @@ echo "export TOOLS_BIN='/d/Tools/bin'" > ~/.warm-terminal/tools.sh
 
 | 结果 | 动作 |
 |---|---|
-| 有 `LXGWWenKaiMono NF` | 什么都不做 |
+| 有 `Maple Mono NF CN` / `CaskaydiaCove NF` 等 NF 字体 | 什么都不做，把名字记下来传给 `-Font` |
 | 有其它 NF 字体（如 `CaskaydiaCove NF`） | 用 `-Font "CaskaydiaCove NF"` 传给部署脚本，**不要**强装新字体 |
-| 一个 NF 都没有 | 尝试 `scoop install LXGWWenKaiMono-NF` / `winget install DEVCOM.JetBrainsMonoNerdFont`；都不行则提示用户手动装，并把 `font.face` 改成系统已有字体 |
+| 一个 NF 都没有 | 尝试 `scoop install Maple-Mono-NF-CN`（中文+图标）或 `winget install DEVCOM.JetBrainsMonoNerdFont`；都不行则提示用户手动装，并把 `font.face` 改成系统已有字体 |
 
 3. **不要**把字体文件提交进 git（体积 + 许可证）。
 
 > 真实案例：曾有机器 `settings.json` 写着 `LXGWWenKaiMono NF` 但系统里根本没这个字体，
 > 一直是 fallback 在渲染 —— 图标缺失但**不报错**。所以必须查注册表，不能看配置。
+>
+> ⚠️ 还有一层坑：**霞鹜文楷官方没有 NF 版**（只有无图标的 `LXGWWenKaiMono-Regular.ttf`）。
+> 不要给用户推荐 `scoop install LXGWWenKaiMono-NF` —— 那个包不存在。中文+图标请用
+> `Maple Mono NF CN`。
 
 ---
 
