@@ -3,15 +3,15 @@
     <rect x="0" y="0" width="440" height="30" rx="10" fill="#fffaf3"/>
     <rect x="0" y="20" width="440" height="10" fill="#fffaf3"/>
     <circle cx="16" cy="15" r="3.5" fill="#b4637a"/>
-    <text x="27" y="19" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10.5" fill="#575279">Git Bash</text>
+    <text x="27" y="19" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="10.5" fill="#575279">Git Bash</text>
     <rect x="0" y="30" width="440" height="2" fill="#faf4ed"/>
-    <text x="26" y="82" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#286983">~/projects/warm-terminal</tspan><tspan fill="#56949f"> (main)</tspan></text>
-    <text x="26" y="103" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">$ </tspan><tspan fill="#575279">lt</tspan></text>
-    <text x="26" y="124" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#286983"> 󰉋 bash</tspan><tspan fill="#286983">    󰉋 scripts</tspan><tspan fill="#286983">    󰉋 themes</tspan></text>
-    <text x="26" y="145" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279"> 󰈔 README.md</tspan><tspan fill="#ea9d34">    󰈔 LICENSE</tspan></text>
-    <text x="26" y="166" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#907aa9"> 󰈞 settings.json</tspan></text>
-    <text x="26" y="187" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">$ </tspan><tspan fill="#575279">gs</tspan></text>
-    <text x="26" y="208" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="12.5"><tspan fill="#575279">On branch </tspan><tspan fill="#286983">main</tspan><tspan fill="#797593">  clean</tspan></text>
-    <text x="26" y="216" font-family="ui-monospace, 'LXGWWenKaiMono NF', Consolas, monospace" font-size="10" fill="#797593">Rosé Pine Dawn</text>
+    <text x="26" y="82" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="12.5"><tspan fill="#286983">~/projects/warm-terminal</tspan><tspan fill="#56949f"> (main)</tspan></text>
+    <text x="26" y="103" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="12.5"><tspan fill="#575279">$ </tspan><tspan fill="#575279">lt</tspan></text>
+    <text x="26" y="124" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="12.5"><tspan fill="#286983"> 󰉋 bash</tspan><tspan fill="#286983">    󰉋 scripts</tspan><tspan fill="#286983">    󰉋 themes</tspan></text>
+    <text x="26" y="145" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="12.5"><tspan fill="#575279"> 󰈔 README.md</tspan><tspan fill="#ea9d34">    󰈔 LICENSE</tspan></text>
+    <text x="26" y="166" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="12.5"><tspan fill="#907aa9"> 󰈞 settings.json</tspan></text>
+    <text x="26" y="187" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="12.5"><tspan fill="#575279">$ </tspan><tspan fill="#575279">gs</tspan></text>
+    <text x="26" y="208" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="12.5"><tspan fill="#575279">On branch </tspan><tspan fill="#286983">main</tspan><tspan fill="#797593">  clean</tspan></text>
+    <text x="26" y="216" font-family="JetBrainsMono NF, DejaVu Sans Mono, monospace" font-size="10" fill="#797593">Rosé Pine Dawn</text>
     <rect x="388" y="206" width="6" height="12" fill="#cecacd"/></g>
 </svg>
